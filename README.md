@@ -19,3 +19,6 @@ services:
       - 8585:8585
 ```
 In your `SOURCE_REPO` you should setup https://developer.github.com/webhooks/ and set `SECRET` and `PORT`(in section `ports` and `environment`)
+
+## Docker
+https://hub.docker.com/r/taraj2/repush
