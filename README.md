@@ -12,6 +12,7 @@ services:
     environment:
       - SECRET=YOUR_SECRET
       - PORT=8585
+      - PUSH_FORCE=FALSE
       - SOURCE_REPO=https://USERNAME:PASSWORD@github.com/Taraj/in.git
       - TARGET_REPO=https://USERNAME:PASSWORD@github.com/Taraj/out.git
     restart: on-failure
@@ -19,3 +20,6 @@ services:
       - 8585:8585
 ```
 In your `SOURCE_REPO` you should setup https://developer.github.com/webhooks/ and set `SECRET` and `PORT`(in section `ports` and `environment`)
+
+## Docker
+https://hub.docker.com/r/taraj2/repush

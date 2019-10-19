@@ -2,6 +2,9 @@
 set -e
 
 if [ "$1" = 'REPUSH' ]; then
+    if [ ${PUSH_FORCE} = 'TRUE' ]; then
+        echo " --force" >> push.sh
+    fi
     mkdir repo
     cd repo
     git clone ${SOURCE_REPO}
